@@ -3,20 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp-babel": "^8.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-image": "^6.1.0",
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-image": "^6.1.0",
     "gulp-webserver": "^0.9.1",
     "watch": "^1.0.2"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp watch webserver",
+    "build": "gulp minify css js image"
   },
   "author": "",
   "license": "ISC"
